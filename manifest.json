@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Bookmarks",
+    "description": "If you not remembering websites? Meet Bookmarks, a Bookmarks chrome extension that can manage help users save and organize their favorite websites for easy access ",
+    "version": "1.0.0",
+    "content_scripts": [{
+        "js": ["popup.js"],
+        "matches": ["http://*/*","https://*/*","<all_urls>"]
+    }], 
+    "icons": {
+        "16": "icon16.png",
+        "48": "bookmarks.png",
+        "128": "icon128.png"
+    },
+    "action": {
+        "default_icon": "bookmarks.png",
+        "default_title": "Bookmarks",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "storage",
+        "tabs",
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "*://*.example.org/"
+    ]
+}
